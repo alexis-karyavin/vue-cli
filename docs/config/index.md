@@ -170,10 +170,13 @@ Deprecated since Vue CLI 3.3, please use [`publicPath`](#publicPath) instead.
   // vue.config.js
   module.exports = {
     devServer: {
-      overlay: {
-        warnings: true,
-        errors: true
-      }
+      client: {
+        overlay: {
+          errors: true,
+          warnings: false,
+          runtimeErrors: true,
+        },
+      },
     }
   }
   ```
